@@ -14,6 +14,7 @@ import java.util.Scanner;
  * 
  * Liverpool John Moores University
  * 4th March 2014
+ * Licensed under the GPL v.3
  * 
  * @author David Llewellyn-Jones, D.Llewelyly-Jones@ljmu.ac.uk
  *
@@ -104,10 +105,9 @@ public class ProofOfWorkExample {
 	 */
 	public static void measureSearchTime() throws NoSuchAlgorithmException, UnsupportedEncodingException {
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
-		int zeroBitsNeeded = 30;
+		int zeroBitsNeeded = 0;
 		int howManyToFind = 1 << 25;
-		howManyToFind = 5;
-		String textToHash = "Some random text.";
+		String textToHash = "All you need is love";
 		
 		// Work through the number of initial zeroes
 		while (zeroBitsNeeded <= 256) {
